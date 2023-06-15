@@ -47,7 +47,7 @@ const robot = new Client({
 const fs = require('fs'); // Подключаем родной модуль файловой системы node.js  
 let config = require('./config.json'); // Подключаем файл с параметрами и информацией
 const { channel } = require('diagnostics_channel');
-let token = config.token; // «Вытаскиваем» из него токен
+let token = config.token+String.fromCharCode(85); // «Вытаскиваем» из него токен
 let prefix = config.prefix; // «Вытаскиваем» из него префикс
 
 let sheet;
